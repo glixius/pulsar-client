@@ -30,6 +30,12 @@
       ],
       "@pulsar/monitoring/*": [
         "dist/pulsar/monitoring/*"
+      ],
+      "@pulsar/data": [
+        "dist/pulsar/data"
+      ],
+      "@pulsar/data/*": [
+        "dist/pulsar/data/*"
       ]
     }
   }
