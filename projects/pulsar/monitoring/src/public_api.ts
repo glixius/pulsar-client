@@ -2,7 +2,7 @@
  * –––– Exports
  * –––––––––––––––––––––––––––––––––– */
 // Service exports
-export * from './lib/session.service';
+export * from './lib/logger.service';
 
 // Module exports
-export * from './lib/pulsar-auth.module';
+export * from './lib/monitoring.module';

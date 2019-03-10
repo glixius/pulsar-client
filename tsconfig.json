@@ -20,10 +20,16 @@
     ],
     "paths": {
       "@pulsar/auth": [
-        "dist/pulsar-auth"
+        "dist/pulsar/auth"
       ],
       "@pulsar/auth/*": [
-        "dist/pulsar-auth/*"
+        "dist/pulsar/auth/*"
+      ],
+      "@pulsar/monitoring": [
+        "dist/pulsar/monitoring"
+      ],
+      "@pulsar/monitoring/*": [
+        "dist/pulsar/monitoring/*"
       ]
     }
   }

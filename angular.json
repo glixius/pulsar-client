@@ -107,33 +107,68 @@
         }
       }
     },
-    "pulsar-auth": {
-      "root": "projects/pulsar-auth",
-      "sourceRoot": "projects/pulsar-auth/src",
+    "@pulsar/auth": {
+      "root": "projects/pulsar/auth",
+      "sourceRoot": "projects/pulsar/auth/src",
       "projectType": "library",
       "prefix": "pau",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/pulsar-auth/tsconfig.lib.json",
-            "project": "projects/pulsar-auth/ng-package.json"
+            "tsConfig": "projects/pulsar/auth/tsconfig.lib.json",
+            "project": "projects/pulsar/auth/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/pulsar-auth/src/test.ts",
-            "tsConfig": "projects/pulsar-auth/tsconfig.spec.json",
-            "karmaConfig": "projects/pulsar-auth/karma.conf.js"
+            "main": "projects/pulsar/auth/src/test.ts",
+            "tsConfig": "projects/pulsar/auth/tsconfig.spec.json",
+            "karmaConfig": "projects/pulsar/auth/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/pulsar-auth/tsconfig.lib.json",
-              "projects/pulsar-auth/tsconfig.spec.json"
+              "projects/pulsar/auth/tsconfig.lib.json",
+              "projects/pulsar/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@pulsar/monitoring": {
+      "root": "projects/pulsar/monitoring",
+      "sourceRoot": "projects/pulsar/monitoring/src",
+      "projectType": "library",
+      "prefix": "pmo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pulsar/monitoring/tsconfig.lib.json",
+            "project": "projects/pulsar/monitoring/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pulsar/monitoring/src/test.ts",
+            "tsConfig": "projects/pulsar/monitoring/tsconfig.spec.json",
+            "karmaConfig": "projects/pulsar/monitoring/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pulsar/monitoring/tsconfig.lib.json",
+              "projects/pulsar/monitoring/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
