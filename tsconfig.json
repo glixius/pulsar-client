@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@pulsar/auth": [
+        "dist/pulsar-auth"
+      ],
+      "@pulsar/auth/*": [
+        "dist/pulsar-auth/*"
+      ]
+    }
   }
 }
