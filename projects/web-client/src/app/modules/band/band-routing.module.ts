@@ -5,21 +5,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// App imports
+import { BandComponent } from './band/band.component';
+
 /* ––
- * –––– Routes definition
+ * –––– Routes declaration
  * –––––––––––––––––––––––––––––––––– */
 const routes: Routes = [
-  { path: '', redirectTo: 'auth', pathMatch: 'full' },
-  { path: 'auth', loadChildren: './modules/auth/auth.module#AuthModule' },
-  { path: 'band', loadChildren: './modules/band/band.module#BandModule' },
-  { path: '**' , redirectTo: 'band' },
+  { path: '', component: BandComponent }
 ];
 
 /* ––
  * –––– Module declaration
  * –––––––––––––––––––––––––––––––––– */
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class BandRoutingModule { }

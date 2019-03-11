@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { pulsarReducers, metaReducers } from './store';
+import { CoreModule } from './modules';
 
 /* ––
  * –––– Module declaration
@@ -23,7 +24,8 @@ import { pulsarReducers, metaReducers } from './store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot(pulsarReducers, { metaReducers })
+    StoreModule.forRoot(pulsarReducers, { metaReducers }),
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
