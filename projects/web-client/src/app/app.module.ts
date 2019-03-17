@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { pulsarReducers, metaReducers } from './store';
 import { CoreModule } from './modules';
+import { MonitoringModule, AnalyticsProviders } from '@pulsar/monitoring';
+import { environment } from '../environments/environment';
 
 /* ––
  * –––– Module declaration
@@ -25,7 +27,11 @@ import { CoreModule } from './modules';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(pulsarReducers, { metaReducers }),
-    CoreModule
+    CoreModule,
+    MonitoringModule.forRoot({
+      analytics: { provider: AnalyticsProviders.Google, trackingID: environment.analytics.trackingID },
+      debug: !environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

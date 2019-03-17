@@ -11,6 +11,7 @@ import { Store, select } from '@ngrx/store';
 // App imports
 import { State } from './store';
 import { PulsarAction } from './store/actions';
+import { AnalyticsService } from '@pulsar/monitoring';
 
 /* ––
  * –––– Component declaration
@@ -28,8 +29,9 @@ export class AppComponent {
 
   /* –– Constructor
    * –––––––––––––––––––––––––––––––––– */
-  constructor( private store: Store<State>) {
+  constructor( private store: Store<State>, private analyticsService: AnalyticsService) {
     this.pulsar$ = this.store.pipe(select('pulsar'));
+    this.analyticsService.registerEvent('sample', 'test');
   }
 
   dispatch() {

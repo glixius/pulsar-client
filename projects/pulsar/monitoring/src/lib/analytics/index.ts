@@ -1,6 +1,5 @@
 /* ––
- * –––– Environment declaration
+ * –––– Exports
  * –––––––––––––––––––––––––––––––––– */
-export const environment = {
-  production: true
-};
+export * from './analytics.service';
+export * from './google-analytics.service';
