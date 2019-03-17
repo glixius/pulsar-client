@@ -10,5 +10,6 @@ import { AnalyticsProviders } from '../monitoring.constants';
  * –––––––––––––––––––––––––––––––––– */
 export interface MonitoringConfig {
   analytics: { provider: AnalyticsProviders, trackingID: string };
+  logging: { key: string, tag: string };
   debug: boolean;
 }

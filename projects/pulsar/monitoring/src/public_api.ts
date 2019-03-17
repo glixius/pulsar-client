@@ -2,7 +2,7 @@
  * –––– Exports
  * –––––––––––––––––––––––––––––––––– */
 // Service exports
-export * from './lib/logger.service';
+export { LoggerService } from './lib/logging';
 export { AnalyticsService } from './lib/analytics';
 
 // Constants exports

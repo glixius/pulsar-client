@@ -4554,6 +4554,19 @@ ng-packagr@^4.2.0:
     uglify-js "^3.0.7"
     update-notifier "^2.3.0"
 
+ng2-cookies@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/ng2-cookies/-/ng2-cookies-1.0.12.tgz#3f3e613e0137b0649b705c678074b4bd08149ccc"
+  integrity sha1-Pz5hPgE3sGSbcFxngHS0vQgUnMw=
+
+ngx-loggly-logger@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-loggly-logger/-/ngx-loggly-logger-7.0.1.tgz#f98be474bb07f66a1e6f872c786e453151ab712d"
+  integrity sha512-t41wuMgt9aj0Q1190mIvjm+whT+x2Hvjw52eSLuomLK3lSCxNuXS/B5GuOBvmx7hZoIcuFNpxd3IONkyro4zbw==
+  dependencies:
+    ng2-cookies "^1.0.12"
+    tslib "^1.9.0"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

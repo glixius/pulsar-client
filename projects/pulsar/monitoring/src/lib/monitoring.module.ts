@@ -4,6 +4,9 @@
 // Platform imports
 import { NgModule, ModuleWithProviders, InjectionToken } from '@angular/core';
 
+// Third-party imports
+import { NgxLogglyModule } from 'ngx-loggly-logger';
+
 // App Imports
 import { MonitoringConfig } from './models';
 import { AnalyticsService, GoogleAnalyticsService } from './analytics';
@@ -22,7 +25,9 @@ export const providers = new Map([
  * –––––––––––––––––––––––––––––––––– */
 @NgModule({
   declarations: [],
-  imports: [],
+  imports: [
+    NgxLogglyModule.forRoot(),
+  ],
   exports: []
 })
 export class MonitoringModule {

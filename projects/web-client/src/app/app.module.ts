@@ -30,7 +30,8 @@ import { environment } from '../environments/environment';
     CoreModule,
     MonitoringModule.forRoot({
       analytics: { provider: AnalyticsProviders.Google, trackingID: environment.analytics.trackingID },
-      debug: !environment.production
+      logging: environment.logging,
+      debug: !environment.production,
     })
   ],
   providers: [],
